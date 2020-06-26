@@ -8,6 +8,7 @@ spec:
     image: busybox
     command: ["/bin/sh"]
     args: ["-c", "while true; do echo $(date -u) >> /data/out2.txt; sleep 5; done"]
+    resources: {}
     volumeMounts:
     - name: persistent-storage
       mountPath: /data

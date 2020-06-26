@@ -9,7 +9,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: efs-sc
-  csi:
-    driver: efs.csi.aws.com
-    volumeHandle: fs-756b9670
+  storageClassName: efs-nfs
+  nfs:
+    server: fs-756b9670.efs.us-west-2.amazonaws.com
+    path: /dir1
